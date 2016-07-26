@@ -12,12 +12,12 @@ RUN mkdir -p "$CATALINA_HOME"
 RUN cd /root && curl -o apache-tomcat.tar.gz http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.36/bin/apache-tomcat-8.0.36.tar.gz && tar -zxvf apache-tomcat.tar.gz && mv /root/apache-tomcat-8.0.36/* /usr/local/tomcat/ && rm -rf /usr/local/tomcat/webapps/* && rm -rf apache-tomcat*
 
 # hcpaas-web
-RUN mkdir /root/tj-quanet-webapp
-COPY pom.xml /root/tj-quanet-webapp/
-COPY ./src /root/tj-quanet-webapp/src
+RUN mkdir /root/springmvc-mysql-blog
+COPY pom.xml /root/springmvc-mysql-blog
+COPY ./src /root/springmvc-mysql-blog/src
 
 # mvn and move to tomcat
-RUN cd /root/tj-quanet-webapp && mvn package -Dmaven.test.skip=true && cp target/tj-quanet-webapp.war /usr/local/tomcat/webapps/ROOT.war
+RUN cd /root/springmvc-mysql-blog && mvn package -Dmaven.test.skip=true && cp target/springmvc-mysql-blog.war /usr/local/tomcat/webapps/ROOT.war
 
 RUN chown -R 1001:0 /usr/local/tomcat && chmod -R ug+rw /usr/local/tomcat
 
