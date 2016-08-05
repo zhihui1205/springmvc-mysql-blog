@@ -6,6 +6,7 @@ FROM centos:latest
 RUN yum install git java-1.8.0-openjdk-devel maven -y
 
 # install tomcat
+ENV TEST testupdate
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
