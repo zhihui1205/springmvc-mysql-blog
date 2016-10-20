@@ -145,7 +145,7 @@
       </snapshots>
       <id>central</id>
       <name>Central Repository</name>
-      <url>http://10.70.71.161:8081/nexus/content/repositories/central/</url>
+      <url>http://maven.haihangyun.com/content/repositories/central/</url>
     </repository>
   </repositories>
     <build>
