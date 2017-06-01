@@ -19,7 +19,7 @@ COPY pom.xml /root/springmvc-mysql-blog
 COPY ./src /root/springmvc-mysql-blog/src
 
 # mvn and move to tomcat
-RUN cd /root/springmvc-mysql-blog && cp target/blog.war /usr/local/tomcat/webapps/ROOT.war
+RUN cd /root/springmvc-mysql-blog && cp blog.war /usr/local/tomcat/webapps/ROOT.war
 
 RUN chown -R 1001:0 /usr/local/tomcat && chmod -R ug+rw /usr/local/tomcat
 
