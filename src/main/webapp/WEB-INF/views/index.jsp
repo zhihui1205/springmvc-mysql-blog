@@ -29,7 +29,7 @@ body {
 	<div class="container-narrow">
 		<div class="masthead">
 			<ul class="nav nav-pills pull-right">
-				<li class="active"><a href="#">Home</a></li>
+				<li class="active"><a href="../home">Home</a></li>
 				<li><a href="#">About</a></li>
 				<c:if test="${empty sessionScope.loggedInUser}">
 					<li><a href="<c:url value="/signin"/>">Sign In</a></li>
